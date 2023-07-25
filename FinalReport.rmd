@@ -50,15 +50,48 @@ DruggieData = filter(triUmp, DrugUser == "yes")
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
+```{r}
+barchartGC(~treatment+infected,data=DruggieData)
+barchartGC(~treatment+infected,data=DruggieData, type="percent")
+
+```
+ 
+ 
+ The graphs shows people who were given the vaccine are far less likley to be infected with aids while the placebo group is more likely to get aids
+ 
+ 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+
+```{r}
+table1 <- xtabs(~treatment+ infected, data=DruggieData)
+rowPerc(table1)
+colPerc(table1)
+```
+this table shows us that out of all the people who contracted aids those without the vaccine were found to make up the majority compared to those who took the vaccine who were 3x less likely to be apart of the aids group.
+
+
 
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+    the p value is 1.242e-07 therefore disproving the null hypothesis  and proving a relationship between the vaccine and decreasing the likely hood of contracting aids
+    
+    
+    
+    
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+By analyzing the data and then running a chi test for the p value ive rejected the null proving that the vaccine does help prevent aids. The data shows a .35% higher likely-hood of contracting aids in those who weren't vaccinated compared to those who were.
