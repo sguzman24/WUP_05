@@ -1,5 +1,5 @@
 ---
-title: "Aides Drug"
+title: "Aids Drug"
 author: "seth guzman"
 date: "7/24/23"
 output: html_document
@@ -87,11 +87,11 @@ fisher.test(table1)
 
     the p value is 1.242e-07 therefore disproving the null hypothesis  and proving a relationship between the vaccine and decreasing the likely hood of contracting aids
     
-    
+  the fisher exact test shows the placebo group to have a .35% higher chance in contracting aids 
     
     
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-By analyzing the data and then running a chi test for the p value ive rejected the null proving that the vaccine does help prevent aids. The data shows a .35% higher likely-hood of contracting aids in those who weren't vaccinated compared to those who were.
+By analyzing the data and then running a chi test for the p value ive rejected the null proving that the vaccine does help prevent aids. The data shows a .35% higher likelihood of contracting aids in those who weren't vaccinated compared to those who were.
