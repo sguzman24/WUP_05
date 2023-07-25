@@ -1,6 +1,6 @@
 ---
 title: "Aides Drug"
-author: "Put your name here!"
+author: "seth guzman"
 date: "put the date here"
 output: html_document
 ---
