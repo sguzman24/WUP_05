@@ -1,13 +1,14 @@
 ---
 title: "Aides Drug"
 author: "seth guzman"
-date: "put the date here"
+date: "7/24/23"
 output: html_document
 ---
 
 ```{r include=FALSE,echo=FALSE}
 require(tidyverse)
 require(tigerstats)
+require(dplyr)
 triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 ```
 
@@ -17,13 +18,31 @@ triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 
 A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the DrugUsers, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
 
+
+$H_0$: the vaccine is not effective in aids among drug users
+$H_0$: the vaccine is effective in treating aids among drug users
+
+data for this study was taken from a clinic trail for the drug triUmpsal
+
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
+i will be using the cat~Cat for the numerical analysis 
+
+Because the question is about drug users, we have to subset the data to include only druggies
+
+Graphical Display chart: bar chart, numerical display chart: cross table, inferential display chart:
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+
+
+```{r}
+DruggieData = filter(triUmp, DrugUser == "yes")
+```
+
 
 ## Descriptive Results
 
